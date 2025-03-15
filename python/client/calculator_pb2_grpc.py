@@ -26,7 +26,8 @@ if _version_not_supported:
 
 
 class CalculatorStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """Defines the Calculator service.
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -42,10 +43,12 @@ class CalculatorStub(object):
 
 
 class CalculatorServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """Defines the Calculator service.
+    """
 
     def Calculate(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Performs a binary arithmetic operation.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -67,7 +70,8 @@ def add_CalculatorServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class Calculator(object):
-    """Missing associated documentation comment in .proto file."""
+    """Defines the Calculator service.
+    """
 
     @staticmethod
     def Calculate(request,
