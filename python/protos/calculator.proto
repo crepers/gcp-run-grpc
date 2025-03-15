@@ -2,21 +2,41 @@ syntax = "proto3";
 
 package calculator;
 
+// Represents arithmetic operations.
+enum Operation {
+  // Addition operation.
+  ADD = 0;
+
+  // Subtraction operation.
+  SUBTRACT = 1;
+
+  // Multiplication operation (Optional: for future extension).
+  // MULTIPLY = 2;
+
+  // Division operation (Optional: for future extension).
+  // DIVIDE = 3;
+}
+
+// Represents a binary arithmetic operation request.
 message BinaryOperation {
+  // The first operand.
   float first_operand = 1;
+
+  // The second operand.
   float second_operand = 2;
+
+  // The operation to perform.
   Operation operation = 3;
 }
 
+// Represents the result of a calculation.
 message CalculationResult {
+  // The result of the calculation.
   float result = 1;
 }
 
-enum Operation {
-  ADD = 0;
-  SUBTRACT = 1;
-}
-
+// Defines the Calculator service.
 service Calculator {
+  // Performs a binary arithmetic operation.
   rpc Calculate (BinaryOperation) returns (CalculationResult);
 }
