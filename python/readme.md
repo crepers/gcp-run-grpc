@@ -102,7 +102,7 @@ pip install -r requirements.txt
 - `.proto` 파일을 컴파일하여 Python 코드를 생성합니다.
 
     ```bash
-    python -m grpc_tools.protoc -I./protos --python_out=./server --grpc_python_out=./server ./server/protos/calculator.proto
+    python -m grpc_tools.protoc -I./protos --python_out=./server --grpc_python_out=./server ./protos/calculator.proto
     python -m grpc_tools.protoc -I./protos --python_out=./client --grpc_python_out=./client ./protos/calculator.proto
     ```
 
