@@ -140,7 +140,8 @@ gcloud run deploy "$CLOUDRUN_SERVICE" \
   --set-env-vars="PROJECT_ID=$PROJECT_ID,REGION=$LOCATION" \
   --service-account="$SERVICE_ACCOUNT_EMAIL" \
   --project="$PROJECT_ID" \
-  --port=8080
+  --port=8080 \
+  --use-http2
 ```
 
 ### Get Cloud Run Service URL and Service Account Email
